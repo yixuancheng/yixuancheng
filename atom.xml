@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yxcheng.cc/"/>
-  <updated>2020-02-29T10:32:46.941Z</updated>
+  <updated>2020-02-29T15:59:44.663Z</updated>
   <id>http://yxcheng.cc/</id>
   
   <author>
@@ -17,68 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我的第一篇博客</title>
-    <link href="http://yxcheng.cc/all/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yxcheng.cc/all/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
-    <published>2020-02-29T10:32:46.000Z</published>
-    <updated>2020-02-29T10:32:46.941Z</updated>
+    <title>Hello March | 你好 三月</title>
+    <link href="http://yxcheng.cc/all/Hello%20March/"/>
+    <id>http://yxcheng.cc/all/Hello%20March/</id>
+    <published>2020-02-29T15:12:46.000Z</published>
+    <updated>2020-02-29T15:59:44.663Z</updated>
     
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>my first post</title>
-    <link href="http://yxcheng.cc/other/my-first-post/"/>
-    <id>http://yxcheng.cc/other/my-first-post/</id>
-    <published>2020-02-29T07:05:40.000Z</published>
-    <updated>2020-02-29T07:07:31.690Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是我的第一篇文章</p>]]></content>
+    <content type="html"><![CDATA[<p>对我而言，三月是一个好月份，作为“生日月”的前一个月，三月一般我都会好好去实现自己的目标，为的就是在自己老一岁之前，把该完成的事做完，并且，安排好接下来的长期计划。</p><p>2020年开启三月以前，我开好了自己的博客。我慢慢觉得，有些事情你只要有想法了，就成功了1/4，记得把它写到你的Inbox里。等你有时间了，就回看一下你的Inbox，然后着手把这件事情操作起来，就像我把这个博客搭建起来一样，那么它就成功了1/2。接着，就是坚持和不断完善了，是否坚持决定了你是否最后能完成你设定在这件事情上的目标，是否不断完善决定了你这件事是否能做到你满意，在这个过程中，你就不断从50%走向100%了。</p><p>一般我不会为类似的计划设定ddl，因为它带给你的效益只会螺旋往上，而不会走下坡路，我会把这种只会螺旋上涨或停牌而不会下跌或者波动的事件，当作一个长期目标，我会计算，我在这件事情上，花了多少时间，而且，我会定期提醒检查，它边际效益有没有递减，我是否还能从中获益。</p><p><img src="/images/pic1.png" alt=""></p><p>如果边际效益还很高，那就keep doing。反之，自我调整，你可以去学这个领域的new idea，提高你的边际效益，你也可以把这件事情“归档”，开一个新的tracker。当然，对于经营博客这件事情，我觉得还是方法一比较合理。</p><p>长期计划就像养花一样，每天不用付出太多的心思，但是每天都要记得浇浇水，偶尔修建一下枝叶，松一松土，慢慢地，悄悄地，它就结苞开花了。最后看到盛开的花，心情真的棒棒哒！</p><p><img src="/images/pic2.jpeg" alt=""></p><p>那么思考一下，开花以后做些什么呢？我一般都把谢了的花剪掉，然后重新开始漫长的养花过程，就如同，我把一件事情归档以后，会为自己现阶段的成绩感到开心，然后就理理思绪，重新开始下一个阶段了。</p><p>三月，要加油哦！</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;这是我的第一篇文章&lt;/p&gt;
-
+        &lt;p&gt;对我而言，三月是一个好月份，作为“生日月”的前一个月，三月一般我都会好好去实现自己的目标，为的就是在自己老一岁之前，把该完成的事做完，并且，安排好接下来的长期计划。&lt;/p&gt;
+&lt;p&gt;2020年开启三月以前，我开好了自己的博客。我慢慢觉得，有些事情你只要有想法了，就成功了1/4
       
     
     </summary>
     
     
-      <category term="other" scheme="http://yxcheng.cc/categories/other/"/>
     
-    
-      <category term="post" scheme="http://yxcheng.cc/tags/post/"/>
-    
-      <category term="文章" scheme="http://yxcheng.cc/tags/%E6%96%87%E7%AB%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yxcheng.cc/all/hello-world/"/>
-    <id>http://yxcheng.cc/all/hello-world/</id>
-    <published>2020-02-29T05:46:40.551Z</published>
-    <updated>2020-02-29T05:46:40.551Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-    
+      <category term="Mind" scheme="http://yxcheng.cc/tags/Mind/"/>
     
   </entry>
   
