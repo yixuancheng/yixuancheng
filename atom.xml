@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yxcheng.cc/"/>
-  <updated>2020-02-29T15:59:44.663Z</updated>
+  <updated>2020-04-28T03:02:53.744Z</updated>
   <id>http://yxcheng.cc/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【量化专题】期权策略 | 如何用宽跨式组合套利</title>
+    <link href="http://yxcheng.cc/all/post/"/>
+    <id>http://yxcheng.cc/all/post/</id>
+    <published>2020-04-28T02:54:46.000Z</published>
+    <updated>2020-04-28T03:02:53.744Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="套利原理"><a href="#套利原理" class="headerlink" title="套利原理"></a>套利原理</h3><ul><li>通过卖出相同标的、相同到期日的虚值（欧式）认购期权和虚值（欧式）认沽期权得到跨式投资组合，若到期日投资组合内期权仍为虚值，对手方将不会行权，从而可在期权到期日赚取权利金收益；</li><li>为控制波动率风险，赚取权利金收益，需保证投资组合内期权始终为虚值，即保证标的价格在设定区间内波动，若标的价格超出区间界限，将触发调仓条件构建新的投资组合，从而保证标的价格在新区间内波动；</li><li>若标的价格上涨（下跌）超过设定区间上界（下界），买平当前投资组合，卖开更高（更低）执行价的认购期权和认沽期权，从而提高（降低）设定区间上下界，保证标的价格在新区间内波动，到期获取权利金收益。</li></ul><h3 id="操作过程"><a href="#操作过程" class="headerlink" title="操作过程"></a>操作过程</h3><ul><li>每月开仓时，通过wind系统、内部IT系统的数据库等获取标的实时价格、期权合约基础信息及实时信息，计算最优跨式投资组合，程序下单调整持仓至最优组合，同时计算虚值程度、delta、gamma等风险指标，开启实时监控系统；</li><li>开仓后，跟踪实时监控系统反馈的信息，一旦标的价格波动较大导致风险指标触发调仓条件，Python自建平台会迅速根据新的约束条件、系统参数计算新的最优投资组合，程序下单调整持仓至新的最优组合；</li><li>调仓后，实时监控系统监控当前持仓，如果交易时间中标的价格波动较大，返回第二步，直到交易时间结束，程序将自动清算当日成本及浮动盈亏；</li><li>在每月合约到期日的交易时间结束后，自动清算当月盈亏，并清仓等待下月开仓。</li></ul><p><img src="/images/pic1.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;套利原理&quot;&gt;&lt;a href=&quot;#套利原理&quot; class=&quot;headerlink&quot; title=&quot;套利原理&quot;&gt;&lt;/a&gt;套利原理&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;通过卖出相同标的、相同到期日的虚值（欧式）认购期权和虚值（欧式）认沽期权得到跨式投资组合，若到期日投资组合内期权
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Quant" scheme="http://yxcheng.cc/tags/Quant/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>post</title>
+    <link href="http://yxcheng.cc/all/%E3%80%90%E9%87%8F%E5%8C%96%E4%B8%93%E9%A2%98%E3%80%91%E6%8B%A9%E6%97%B6%E5%88%9D%E6%8E%A2%20|%202020%E5%B9%B4%E6%88%91%E8%A6%81%E6%8C%81%E6%9C%89%E9%93%B6%E8%A1%8C%E8%82%A1%E5%90%97%EF%BC%9F/"/>
+    <id>http://yxcheng.cc/all/%E3%80%90%E9%87%8F%E5%8C%96%E4%B8%93%E9%A2%98%E3%80%91%E6%8B%A9%E6%97%B6%E5%88%9D%E6%8E%A2%20|%202020%E5%B9%B4%E6%88%91%E8%A6%81%E6%8C%81%E6%9C%89%E9%93%B6%E8%A1%8C%E8%82%A1%E5%90%97%EF%BC%9F/</id>
+    <published>2020-04-28T02:52:26.000Z</published>
+    <updated>2020-04-28T02:52:26.960Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello March | 你好 三月</title>
