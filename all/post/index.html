@@ -20,20 +20,18 @@
     var CONFIG = {"hostname":"yxcheng.cc","root":"/","scheme":"Muse","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="套利原理 通过卖出相同标的、相同到期日的虚值（欧式）认购期权和虚值（欧式）认沽期权得到跨式投资组合，若到期日投资组合内期权仍为虚值，对手方将不会行权，从而可在期权到期日赚取权利金收益； 为控制波动率风险，赚取权利金收益，需保证投资组合内期权始终为虚值，即保证标的价格在设定区间内波动，若标的价格超出区间界限，将触发调仓条件构建新的投资组合，从而保证标的价格在新区间内波动； 若标的价格上涨（下跌）超过">
+  <meta name="description" content="套利原理套利说白了就是高卖低买， 如果我们在期权比较贵的时候卖出，然后在期权价格下降后买入平仓或者直接持有到期，便可以实现套利收益。那么如何衡量期权的价格呢？ 期权价格&#x3D;内在价值+时间价值，因此随着期权到期日的临近，其时间价值会逐渐下降，如果我们假定标的价格不变，那么期权内在价值也不变（因为期权行权价是不变的），因此期权价格会随着到期日的临近而下降。当然这是最理想的状态，因为我们假定了标的价格不变">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【量化专题】期权策略 | 如何用宽跨式组合套利">
 <meta property="og:url" content="http://yxcheng.cc/all/post/index.html">
 <meta property="og:site_name" content="Sylvia Cheng">
-<meta property="og:description" content="套利原理 通过卖出相同标的、相同到期日的虚值（欧式）认购期权和虚值（欧式）认沽期权得到跨式投资组合，若到期日投资组合内期权仍为虚值，对手方将不会行权，从而可在期权到期日赚取权利金收益； 为控制波动率风险，赚取权利金收益，需保证投资组合内期权始终为虚值，即保证标的价格在设定区间内波动，若标的价格超出区间界限，将触发调仓条件构建新的投资组合，从而保证标的价格在新区间内波动； 若标的价格上涨（下跌）超过">
+<meta property="og:description" content="套利原理套利说白了就是高卖低买， 如果我们在期权比较贵的时候卖出，然后在期权价格下降后买入平仓或者直接持有到期，便可以实现套利收益。那么如何衡量期权的价格呢？ 期权价格&#x3D;内在价值+时间价值，因此随着期权到期日的临近，其时间价值会逐渐下降，如果我们假定标的价格不变，那么期权内在价值也不变（因为期权行权价是不变的），因此期权价格会随着到期日的临近而下降。当然这是最理想的状态，因为我们假定了标的价格不变">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yxcheng.cc/images/pic1.png">
 <meta property="article:published_time" content="2020-04-28T02:54:46.000Z">
-<meta property="article:modified_time" content="2020-04-28T03:02:53.744Z">
+<meta property="article:modified_time" content="2020-09-20T04:14:18.373Z">
 <meta property="article:author" content="Sylvia Cheng">
 <meta property="article:tag" content="Quant">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yxcheng.cc/images/pic1.png">
 
 <link rel="canonical" href="http://yxcheng.cc/all/post/">
 
@@ -195,10 +193,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-04-28 10:54:46 / Modified: 11:02:53" itemprop="dateCreated datePublished" datetime="2020-04-28T10:54:46+08:00">2020-04-28</time>
+              <time title="Created: 2020-04-28 10:54:46" itemprop="dateCreated datePublished" datetime="2020-04-28T10:54:46+08:00">2020-04-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-20 12:14:18" itemprop="dateModified" datetime="2020-09-20T12:14:18+08:00">2020-09-20</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="Symbols count in article">
@@ -206,7 +210,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>587</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -225,18 +229,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="套利原理"><a href="#套利原理" class="headerlink" title="套利原理"></a>套利原理</h3><ul>
-<li>通过卖出相同标的、相同到期日的虚值（欧式）认购期权和虚值（欧式）认沽期权得到跨式投资组合，若到期日投资组合内期权仍为虚值，对手方将不会行权，从而可在期权到期日赚取权利金收益；</li>
-<li>为控制波动率风险，赚取权利金收益，需保证投资组合内期权始终为虚值，即保证标的价格在设定区间内波动，若标的价格超出区间界限，将触发调仓条件构建新的投资组合，从而保证标的价格在新区间内波动；</li>
-<li>若标的价格上涨（下跌）超过设定区间上界（下界），买平当前投资组合，卖开更高（更低）执行价的认购期权和认沽期权，从而提高（降低）设定区间上下界，保证标的价格在新区间内波动，到期获取权利金收益。</li>
+        <h3 id="套利原理"><a href="#套利原理" class="headerlink" title="套利原理"></a>套利原理</h3><p>套利说白了就是<strong>高卖低买</strong>， 如果我们在期权比较贵的时候卖出，然后在期权价格下降后买入平仓或者直接持有到期，便可以实现套利收益。那么如何衡量期权的价格呢？</p>
+<p>期权价格=内在价值+时间价值，因此随着期权到期日的临近，其时间价值会逐渐下降，如果我们假定标的价格不变，那么期权内在价值也不变（因为期权行权价是不变的），因此期权价格会随着到期日的临近而下降。当然这是最理想的状态，因为我们假定了标的价格不变，如果标的价格开始变动，我们会面临什么危机呢？</p>
+<p>我们用<strong>标的的波动率</strong>来衡量标的价格变动的幅度。我们可以把期权的买方（即我们的对手方）看作是赌徒，看涨买方赌未来标的价格会上涨，看跌买方赌未来标的价格会下跌，如果标的的波动率较低，那么对赌徒们的吸引力会很低，买的人少了，根据供给需求理论，期权的价格也不会很高，这对卖方来说不是个好事情，因为没办法以一个高价卖出期权。如果标的的波动率较高，那么赌徒们的赌博心理便会开始作祟，因为一旦他们赌对了方向，那么便可以用较低的成本挣到不少收益。这时候，买期权的人多了，期权价格也会比较高，这对卖方来说是个好机会，因为我们可以以一个较高的价格把期权卖给赌徒们，从而收取一定的利息（即期权权利金）。</p>
+<p>当然，利息不是那么容易就能收入囊中的。卖期权和开小卖部不同，因为期权的买方有行权的权利。举个例子，如果我们在疫情一开始（口罩价格较低的时候）就卖口罩，那么随着疫情的逐步严重，口罩需求的上升，口罩价格上涨，但是这时候我们口罩库存已经不够了，我们只会后悔当初卖得太早了，但是卖口罩的收益还是收入了囊中，因为买口罩的人没有权利要求我们以现在的市场高价再买入口罩给他们。卖期权就不一样了，我们卖的是一种权利，而不是一个实物，因此我们卖出期权后，会面临两种风险（以卖出看涨期权为例）：<br>（1）如果标的价格小幅上涨，我们已经卖出的看涨期权价格会相应上涨，这会导致我们出现一个当日的浮亏，但只要我们卖出的期权仍为虚值，我们还是可以安全地收取到期权的全部权利金（即时间价值，因为虚值期权的内在价值为0）。<br>（2）更严重的情况，如果标的价格大幅上涨，导致我们卖出的看涨期权变成实值（如果一开始我们卖出的是虚值期权），那么到期日，我们需要以一个更高的市场价买入标的送给买方，于是我们会实现一个（S-K）的亏损，虽然我们挣到了期权的时间价值，但是亏了期权的内在价值。</p>
+<p>因此，<strong>选择卖出期权的时间点很重要</strong>，最佳的情况便是：在标的波动率较高的时候，期权价格较高的时候卖出开仓，随后标的的波动率恢复平稳，期权时间价值逐渐消磨，价格逐渐下降，作为卖方，我们便可以安心地在到期日收取到期权的全部权利金，即套利收益。</p>
+<h3 id="如何选择卖出的时间点？"><a href="#如何选择卖出的时间点？" class="headerlink" title="如何选择卖出的时间点？"></a>如何选择卖出的时间点？</h3><ul>
+<li>标的波动率</li>
+<li>期权隐含波动率<br>上面提到的两个指标可以帮助卖方判断现在是否是开仓的合适时间点。标的波动率也叫实际波动率，是对标的价格基于数学统计计算的实际运行波动率，期权的隐含波动率衡量了市场参与者对标的价格未来波动共识预期，隐含波动率的变化即市场共识预期的变化，因此我们可以用隐波高低衡量期权当前价格的高低。</li>
 </ul>
-<h3 id="操作过程"><a href="#操作过程" class="headerlink" title="操作过程"></a>操作过程</h3><ul>
-<li>每月开仓时，通过wind系统、内部IT系统的数据库等获取标的实时价格、期权合约基础信息及实时信息，计算最优跨式投资组合，程序下单调整持仓至最优组合，同时计算虚值程度、delta、gamma等风险指标，开启实时监控系统；</li>
-<li>开仓后，跟踪实时监控系统反馈的信息，一旦标的价格波动较大导致风险指标触发调仓条件，Python自建平台会迅速根据新的约束条件、系统参数计算新的最优投资组合，程序下单调整持仓至新的最优组合；</li>
-<li>调仓后，实时监控系统监控当前持仓，如果交易时间中标的价格波动较大，返回第二步，直到交易时间结束，程序将自动清算当日成本及浮动盈亏；</li>
-<li>在每月合约到期日的交易时间结束后，自动清算当月盈亏，并清仓等待下月开仓。</li>
-</ul>
-<p><img src="/images/pic1.png" alt=""></p>
+<p>隐含波动率与实际波动率有相互回归的关系，因此两者之间的差自然可以考量作为判断隐波未来走势的一个参考。如果这时候实际波动率较高，而期权隐波较低，那我们可以预期未来隐波会上升或者实际波动率会下降，这两个方向是相反的，需要靠投资经理自己对未来行情有一个基本判断，当然我们也可以参考当前波动率处于历史高位还是地位来辅助判断未来隐波变动方向。下一次再详细讲讲这个部分。</p>
+<p>接下来，我们还需要探讨在实际操作中如何将仓位的风险控制在一定的范围，从而保证每个月都可以实现一个预期的收益。下周9月的50ETF要到期了，希望顺利！</p>
 
     </div>
 
@@ -318,7 +321,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#套利原理"><span class="nav-number">1.</span> <span class="nav-text">套利原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作过程"><span class="nav-number">2.</span> <span class="nav-text">操作过程</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#套利原理"><span class="nav-number">1.</span> <span class="nav-text">套利原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何选择卖出的时间点？"><span class="nav-number">2.</span> <span class="nav-text">如何选择卖出的时间点？</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -380,12 +383,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">1k</span>
+    <span title="Symbols count total">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1 mins.</span>
+    <span title="Reading time total">2 mins.</span>
 </div>
 
         
